@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, User, School } from "lucide-react";
+import type { ChangeEvent } from "react";
 import Image from "next/image";
 import Navbar from "@/comps/Navbar";
 import Footer from "@/comps/Footer";
@@ -15,14 +16,14 @@ export default function ApplyPage() {
     course: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // You can place your form submission logic here (e.g., send to backend)
 
     alert(
       "Thank you for applying!\n\nWe've received your application.\n\nCheck the email you provided—we’ll send you the necessary forms to complete your admission process."

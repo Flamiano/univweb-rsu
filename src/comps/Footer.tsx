@@ -44,8 +44,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/academics" className={linkClass("/academics")}>
-                  Academics
+                <Link href="/programs" className={linkClass("/programs")}>
+                  Programs
                 </Link>
               </li>
               <li>

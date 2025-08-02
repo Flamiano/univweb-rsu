@@ -6,6 +6,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Navbar from "@/comps/Navbar";
 import Footer from "@/comps/Footer";
+import type { ChangeEvent, FormEvent } from "react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -14,13 +15,14 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you could validate or send to backend
     alert("I miss you ^^");
   };
   return (
